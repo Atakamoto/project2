@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Project 2 Report</title>
+    <style>
+        :root {
+            --color-neutral-95: hsl(220 10% 95%);
+            --color-neutral-90: hsl(220 10% 90%);
+            --color-neutral-80: hsl(220 10% 80%);
+            --color-neutral-70: hsl(220 10% 70%);
+            --color-neutral-60: hsl(220 10% 60%);
+            --color-neutral-50: hsl(220 10% 50%);
+            --color-neutral-40: hsl(220 10% 40%);
+            --color-neutral-30: hsl(220 10% 30%);
+            --color-neutral-20: hsl(220 10% 20%);
+            --color-neutral-10: hsl(220 10% 10%);
+        }
+
+        html {
+            font: 100%/1.5 system-ui;
+            counter-reset: figure;
+            background: var(--color-neutral-95);
+            max-width: min(75vw, 80em);
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            line-height: 1.1;
+            font-weight: 600;
+        }
+
+        h1, h2 {
+            border-bottom: 1px solid var(--color-neutral-80);
+            padding-bottom: 0.2em;
+        }
+
+        h1 {
+            margin-block: 1em 0.5rem;
+            font-size: 3em;
+            font-weight: 800;
+        }
+
+        h2 {
+            font-size: 180%;
+            color: var(--color-neutral-30);
+        }
+
+        h3 {
+            font-size: 130%;
+        }
+
+        ul {
+            padding-left: 2em;
+        }
+
+        main {
+            background: white;
+            color: var(--color-neutral-20);
+            border-radius: 1rem;
+            padding: 1rem 2rem;
+        }
+
+        figure {
+            margin: 1em 0;
+            padding: 0.5rem;
+            border: 1px solid var(--color-neutral-80);
+            text-align: center;
+            background: white;
+        }
+
+        figcaption {
+            font-size: 0.8em;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Project 2: Persuasive or Deceptive Visualization?</h1>
+    <p><strong>Samson Wan, Edward Zhang, Alex Takamoto</strong> —r1wan@ucsd.edu, edz001@ucsd.edu, atakamoto@ucsd.edu</p>
+</header>
+
+<main>
+
+<h2>Proposition: Arrest-tagged outcomes have longer CCRB investigation durations than non-arrest-tagged outcomes on average.</h2>
+
+<section>
+    <h3>FOR the Proposition</h3>
+
+    <figure>
+        <img src="for_plot.png" alt="Boxplot showing investigation duration distributions" />
+        <figcaption>
+            Boxplots comparing investigation durations show arrest-tagged cases have a higher median and longer distribution than non-arrest cases.
+        </figcaption>
+    </figure>
+
+    <p><strong>Design Decisions and Rationale:</strong></p>
+
+    <ul>
+        <li>We used boxplots to show the full distribution of investigation durations, allowing comparison of medians, spread, and outliers between groups.</li>
+        <li>The side-by-side layout and shared axis make it easy to see that arrest-tagged cases generally have longer investigation durations.</li>
+        <li>Displaying the full distribution provides a more complete and honest representation of the data rather than relying on a single summary statistic.</li>
+    </ul>
+</section>
+
+<section>
+    <h3>AGAINST the Proposition</h3>
+
+    <figure>
+        <img src="against_plot.png" alt="Median-only visualization showing equal durations" />
+        <figcaption>
+            Median investigation duration appears equal (6 months) for both groups, suggesting no difference between arrest and non-arrest cases.
+        </figcaption>
+    </figure>
+
+    <p><strong>Design Decisions and Rationale:</strong></p>
+
+    <ul>
+        <li>We only displayed the median values, which hides the variation and distribution differences between the groups.</li>
+        <li>CCRB's Data Transparency Initiative starts in 2016 so to ensure consistency with how the data is currently structured.</li>
+        <li>We also exclude data from 2020 as an outlier because it only has a half year of data</li>
+        <li>By removing the full distribution and focusing on a single statistic, the visualization downplays meaningful differences and can mislead the viewer.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Final Reflection</h2>
+
+        <p>
+        Designing these two visualizations really showed us how much small choices can change the story the data tells. The “FOR” plot felt pretty straightforward since we were trying to show the full distribution using boxplots, which naturally highlights differences. The “AGAINST” plot was harder, because we had to think about how to simplify the data in a way that still looks reasonable but changes the conclusion like only showing the median and filtering the data. What surprised us most was how easy it was to create something that is technically correct but still gives a misleading impression just by leaving things out.
+        </p>
+
+        <p>
+        This process changed how we think about ethical analysis and visualization. We don't see it as just following strict rules, but more about being honest with how the data is presented. Choices like filtering data, selecting summary statistics, or setting axes all matter because they shape how someone interprets the results. At the same time, we realized that all visualizations are somewhat persuasive, you always have to decide what to highlight, you being persuasive isn't inherently wrong.
+        </p>
+
+        <p>
+        We think the line between acceptable and misleading comes down to whether important context is being hidden. If a visualization simplifies the data but still gives a fair overall picture, it feels acceptable. But if key information like variation or outliers is removed in a way that changes the takeaway, then it becomes misleading. The issue is that there isn't always a clear boundary, which is why it's important for us to think about how others might interpret the visualization, not just whether it is technically correct.
+        </p>
+</section>
+
+</main>
+
+</body>
+</html>
+
+<style>
+    figure img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+</style>
